@@ -160,9 +160,13 @@ def compute_gradient(X, Y, H, P, W_1, b_1, W_2, b_2, lambda_value):
     responding column of X.
     -each column of P contains the probability for each label for the image
     in the corresponding column of X. P has size K×n.
-    -grad_W1 is the gradient matrix of the cost J relative to W and has size
-    K×d. Also called dw.
-    -grad_b1 is the gradient vector of the cost J relative to b and has size
+    -grad_W1 is the gradient matrix of the cost J relative to W1 and has size
+    m×d. Also called dw.
+    -grad_b1 is the gradient vector of the cost J relative to b1 and has size
+    m×1.
+    -grad_W2 is the gradient matrix of the cost J relative to W2 and has size
+    K×m. Also called dw.
+    -grad_b2 is the gradient vector of the cost J relative to b2 and has size
     K×1.
     """
     n_batch = X.shape[1]
